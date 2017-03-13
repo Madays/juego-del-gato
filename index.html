@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">		
+	<title>El juego del gato</title>
+</head>
+<body class="text-center">
+<header>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#saludo">Inicio</a></li>
+					<li><a href="#historial">Historial</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<section id="saludo" class="visible">
+	<div class="content">
+		<div class="container">
+
+			<h1>Bienvenido a Gato Loco!</h1>
+			<button id="btn-saludo">Iniciar juego</button>
+
+		</div>
+	</div>
+</section>
+
+<section id="nombres">
+	<div class="content">
+		<div class="container">
+			<p>Ingrese el nombre del jugador 1 <input class="form-control" type="text" id="player1"></p>
+			<p>Ingrese el nombre del jugador 2 <input class="form-control" type="text" id="player2"></p>
+			<p class="text-center">
+				<button id="btn-nombres">Comenzar</button>
+			</p>
+		</div>
+	</div>
+</section>
+
+
+<section id="juego">
+	<div class="content">
+		<div class="container">
+			<h2>Turno de <span id="player"></span></h2>
+            <div class="row hidden-xs">
+                <div class="col-xs-12 col-sm-6 text-right">
+                   <div style="float:right;">
+                    <table class="play-table">      
+                        <tr>
+                            <td><span class="without-border-top without-border-left">00000</span></td> 
+                            <td><span class="without-border-top">00000</span></td> 
+                            <td><span class="without-border-right without-border-top">00000</span></td> 
+                        </tr>                                         
+                        <tr>
+                            <td><span class="without-border-left">00000</span></td> 
+                            <td><span>00000</span></td> 
+                            <td><span class="without-border-right">00000</span></td> 
+                        </tr>
+                        <tr>
+                            <td><span class="without-border-left without-border-bottom">00000</span></td> 
+                            <td><span class="without-border-bottom">00000</span></td> 
+                            <td><span class="without-border-right without-border-bottom">00000</span></td> 
+                        </tr>                      
+                    </table>
+                    </div>    
+                </div>
+                <div class="col-xs-12 col-sm-6 container-num-movement">
+                    <div style="float:left;" class="num-movement">  
+                        <p>Movimiento <span id="player1"></span><span id="num-movement-player1"></span></p>    
+                        <p>Movimiento <span id="player2"></span><span id="num-movement-player2"></span></p> 
+                    </div>    
+                </div>
+		</div>
+		 <div class="row visible-xs">
+                <div class="col-xs-12">
+                   <div class="text-center">
+                    <table>      
+                        <tr>
+                            <td><span class="without-border-top without-border-left">00000</span></td> 
+                            <td><span class="without-border-top">00000</span></td> 
+                            <td><span class="without-border-right without-border-top">00000</span></td> 
+                        </tr>                                         
+                        <tr>
+                            <td><span class="without-border-left">00000</span></td> 
+                            <td><span>00000</span></td> 
+                            <td><span class="without-border-right">00000</span></td> 
+                        </tr>
+                        <tr>
+                            <td><span class="without-border-left without-border-bottom">00000</span></td> 
+                            <td><span class="without-border-bottom">00000</span></td> 
+                            <td><span class="without-border-right without-border-bottom">00000</span></td> 
+                        </tr>                      
+                    </table>
+                   </div>   
+                </div>
+                <div class="col-xs-12"> 
+                    <p>Movimiento <span id="player1"></span><span id="num-movement-player1"></span></p>    
+                    <p>Movimiento <span id="player2"></span><span id="num-movement-player2"></span></p>     
+                </div>
+		</div>
+	</div>
+</section>
+
+
+<section id="historial">
+	<div class="content">
+		<div class="container">
+			<h2>Historial</h2>
+		</div>
+	</div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
