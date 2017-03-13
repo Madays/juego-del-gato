@@ -40,7 +40,7 @@ function gotoSection(_identificadorDeSeccion)
                 "player2": $('#player2').val()
             },
             function(data, status){
-                alert("Data: " + data + "\nStatus: " + status);
+                console.log("Data:" + data + "\nStatus: " + status);
             });
         });  
     /*------END--Nuevo Juego------*/
