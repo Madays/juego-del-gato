@@ -34,7 +34,7 @@ function gotoSection(_identificadorDeSeccion)
         /*----Login new play----*/
         /*--End--Login new play----*/
         $("#btn-nombres").click(function(){
-            $.post("http://test-ta.herokuapp.com/games",
+            $.post("https://test-ta.herokuapp.com/games",
             {
                 "player1": $('#player1').val(),
                 "player2": $('#player2').val()
