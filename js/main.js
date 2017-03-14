@@ -50,7 +50,7 @@ function gotoSection(_identificadorDeSeccion)
 /*-------<section id="nombres">--------*/
 $('#btn-nombres').click(function(){
     jQuery.ajax({
-        url: 'http://test-ta.herokuapp.com/games',
+        url: 'https://test-ta.herokuapp.com/games',
         type:'post',
         data:{
             "player1":"$('#jugador1').val()",
