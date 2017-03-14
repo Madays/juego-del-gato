@@ -53,8 +53,8 @@ $('#btn-nombres').click(function(){
         url: 'http://test-ta.herokuapp.com/games',
         type:'post',
         data:{
-            player1:$('#jugador1').val(),
-            player2:$('#jugador2').val()        
+            "player1":"$('#jugador1').val()",
+            "player2":"$('#jugador2').val()"        
         }
     }).done(
         function(resp)
