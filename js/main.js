@@ -48,7 +48,7 @@ function gotoSection(_identificadorDeSeccion)
 	currentSection = nextSection;
 }
 /*-------<section id="nombres">--------*/
-$('#btn-nombres').click(function(){
+/*$('#btn-nombres').click(function(){
     jQuery.ajax({
         url: 'https://test-ta.herokuapp.com/games',
         type:'post',
@@ -63,5 +63,28 @@ $('#btn-nombres').click(function(){
             alert(resp);
         }
     );
-});
+});*/
+var request = new XMLHttpRequest();
+
+request.open('POST', 'https://test-ta.herokuapp.com/games');
+
+request.setRequestHeader('Content-Type', 'application/json');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+var body = {
+  'game': {
+    'winner_player': 'Emmanuel',
+    'loser_player': 'Irene',
+    'number_of_turns_to_win': '3'
+  }
+};
+
+request.send(JSON.stringify(body));
 /*-----End--<section id="nombres">-------*/
