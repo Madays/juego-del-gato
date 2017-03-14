@@ -52,10 +52,11 @@ $('#btn-nombres').click(function(){
     jQuery.ajax({
         url: 'https://test-ta.herokuapp.com/games',
         type:'post',
-        data:{
-            "player1":"$('#jugador1').val()",
-            "player2":"$('#jugador2').val()"        
-        }
+        'game': {
+            'winner_player': 'Emmanuel',
+            'loser_player': 'Irene',
+            'number_of_turns_to_win': '3'
+          }
     }).done(
         function(resp)
         {
