@@ -53,8 +53,8 @@ $('#btn-nombres').click(function(){
         url: 'https://test-ta.herokuapp.com/games',
         type:'post',
         'game': {
-            'winner_player': 'Emmanuel',
-            'loser_player': 'Irene',
+            'winner_player': 'Mad',
+            'loser_player': 'playrLuser',
             'number_of_turns_to_win': '3'
           }
     }).done(
@@ -64,4 +64,4 @@ $('#btn-nombres').click(function(){
         }
     );
 });
-/*-----End--<section id="nombres">--------*/
+/*-----End--<section id="nombres">-------*/
